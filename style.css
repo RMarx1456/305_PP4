@@ -5,6 +5,10 @@ main {
     flex-wrap: wrap;
 }
 
+span {
+    display: none;
+}
+
 main > form > input {
     width: 100%;
     flex-grow: 1;
