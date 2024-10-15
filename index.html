@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Validation</title>
 </head>
 <body>
-    
+    <main>
+        <h1>Create Account</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="you@example.com">
+            
+            <label for="password">Password:</label>
+            <input type="text" id="password">
+            
+            <label for="confirm-password">Confirm password:</label>
+            <input type="text" id="confirm-password">
+
+            <input type="checkbox" id="agree">
+            <label for="agree">I agree to the terms</label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
 </body>
 </html>
