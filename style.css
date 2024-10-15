@@ -1,0 +1,13 @@
+main {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > form > input {
+    width: 100%;
+    flex-grow: 1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
