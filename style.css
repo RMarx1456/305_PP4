@@ -1,17 +1,56 @@
-main {
-    width: 40%;
-    margin: auto;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: gray;
+    width: 600px;
+    padding: 30px;
 }
 
 span {
     display: none;
 }
 
-main > form > input {
-    width: 100%;
-    flex-grow: 1;
-    margin-top: 15px;
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.row {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+div > input {
+    
     margin-bottom: 15px;
+}
+
+div {
+    padding: 8px;
+}
+
+#div-check {
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+input {
+    padding: 8px;
+}
+
+input::placeholder {
+    font-size: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
