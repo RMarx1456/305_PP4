@@ -1,8 +1,13 @@
+/**
+ * TODO: Create a Validation for if the user does NOT agree to the terms, the form will not submit.
+ */
+
 // Validating the fields
-document.getElementById("account-validation").onsubmit.value = function() {
+document.getElementById("account-validation").onsubmit = function() {
 
     // Validation
     let isValid = true;
+    clearErrors();
 
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -34,7 +39,7 @@ document.getElementById("account-validation").onsubmit.value = function() {
 
 function clearErrors() {
     let errors = document.getElementsByClassName("err");
-    for (let i = 0; errors.length; i++) {
+    for (let i = 0; i < errors.length; i++) {
         errors[i].style.display = "none";
     }
 }

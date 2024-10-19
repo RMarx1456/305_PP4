@@ -11,11 +11,12 @@ main {
     width: 375px;
     padding: 30px;
     border-radius: 8px;
+    color: white;
 }
 
 span {
     display: none;
-    color: red;
+    color: maroon;
 }
 
 form {
