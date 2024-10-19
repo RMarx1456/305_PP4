@@ -1,5 +1,7 @@
 /**
  * TODO: Create a Validation for if the user does NOT agree to the terms, the form will not submit.
+ * TODO: Create validation for improper email format.
+ * TODO: Create validation if password is shorter than 8 characters. You might have to remove the minlength attribute inside the input tag.
  */
 
 // Validating the fields
