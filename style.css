@@ -7,25 +7,30 @@ body {
 }
 
 main {
-    background-color: gray;
-    width: 600px;
+    background-color: salmon;
+    width: 375px;
     padding: 30px;
+    border-radius: 8px;
 }
 
 span {
     display: none;
+    color: red;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
 }
 
 .row {
     display: inline-flex;
     flex-direction: column;
 }
+
+/* This is making it so the span tag fits right underneath the input box. */
+span
 
 div > input {
     
@@ -43,6 +48,19 @@ div {
 button {
     padding: 12px;
     border-radius: 8px;
+    background-color: black;
+    color: white;
+    width: 30%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#submit {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 input {
