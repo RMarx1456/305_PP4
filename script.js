@@ -1,3 +1,5 @@
+/*
+I wrote this code but forgot to do a git pull beforehand, but I don't want this code to go to waste.
 document.getElementById("mainForm").onsubmit = function() {
     const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     
@@ -12,7 +14,7 @@ document.getElementById("mainForm").onsubmit = function() {
     let inputs = document.querySelectorAll("#mainForm > input");
 
     for(let i = 0; i < inputs.length; i++) {
-        if(inputs[i].value = null || inputs[i].value == "") {
+        if(inputs[i].value === null || inputs[i].value === "") {
             errs[i].display = block;
         }
     }
@@ -24,18 +26,17 @@ document.getElementById("mainForm").onsubmit = function() {
         case true:
             isValid = reg.test(email);
             errList[1] = isValid;
-        case true:
+            if(!isValid) {break;}
+
             isValid = passwordFirst + Math.abs(passwordFirst);
             errList[2] = isValid;
+            if(!isValid) {break;}
 
-        case true:
-           /*
             Xoring two of the same characters will equal zero.
             Xoring two different characters will not equal zero.
             If the entire string matches the other string,
             the xor operations summed should equal zero.
             We can convert to a boolean, and then flip the bit (falsy turns to true, and the other way around).
-            */
             if(passwordFirst.length != passwordConfirm.length) {
                 isValid = false;
                 errList[3] = isValid;
@@ -48,6 +49,7 @@ document.getElementById("mainForm").onsubmit = function() {
                 isValid = !Boolean(sum);
                 errList[3] = isValid;
             }
+            if(!isValid) {break;}
         case false:
             for(let i = 0; i < errList.length; i++) {
                 if(errList[i] = false) {
@@ -60,6 +62,7 @@ document.getElementById("mainForm").onsubmit = function() {
     }
     return true;
 }
+*/
 /**
  * TODO: Create a Validation for if the user does NOT agree to the terms, the form will not submit.
  * TODO: Create validation for improper email format.
@@ -68,7 +71,8 @@ document.getElementById("mainForm").onsubmit = function() {
 
 // Validating the fields
 document.getElementById("account-validation").onsubmit = function() {
-
+    const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    
     // Validation
     let isValid = true;
     clearErrors();
@@ -83,17 +87,17 @@ document.getElementById("account-validation").onsubmit = function() {
         isValid = false;
     }
 
-    if (email == "") {
+    if (email == "" || reg.test(email) == false) {
         document.getElementById("err-email").style.display = "block";
         isValid = false;
     }
 
-    if (pass == "") {
+    if (pass == "" || pass.length < 8) {
         document.getElementById("err-password").style.display = "block";
         isValid = false;
     }
 
-    if (confirmPass == "") {
+    if (confirmPass == "" || confirmPass != pass) {
         document.getElementById("err-confirm-pass").style.display = "block";
         isValid = false;
     }
