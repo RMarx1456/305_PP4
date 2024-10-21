@@ -30,9 +30,6 @@ form {
     flex-direction: column;
 }
 
-/* This is making it so the span tag fits right underneath the input box. */
-span
-
 div > input {
     
     margin-bottom: 15px;
