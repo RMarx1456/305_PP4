@@ -1,3 +1,5 @@
+<!-- Tyler Gilmore & Raymond Marx -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +14,26 @@
         <h1>Create Account</h1>
         <form id ="mainForm">
             <label for="name">Name:</label>
+        <form id="account-validation">
+            <div id="div-name" class="row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
                 <span id="err-name" class="err">
                     Field is required!
                 </span>
-            <input type="text" id="name" placeholder="Enter your name">
-        
-            <label for="email">Email:</label>
+            </div>
+
+            <div id="id-email" class="row">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="you@example.com">
                 <span id="err-email" class="err">
                     Field is required!
                 </span>
-            <input type="text" id="email" placeholder="you@example.com">
-                
-            <label for="password">Password:</label>
+            </div> 
+            
+            <div id="id-pass" class="row">
+                <label for="password">Password:</label>
+                <input type="password" id="password" minlength="8">
                 <span id="err-password" class="err">
                     Please make sure your password has at least 8 characters
                 </span>
@@ -31,16 +41,24 @@
             
             <label for="confirm-password">Confirm password:</label>
                 <span id="err-confirm-password" class="err">
-                    Field is required!
-                </span>
-            <input type="text" id="confirm-password">
+            </div>
 
-            <input type="checkbox" id="agree">
-            <label for="agree">I agree to the terms</label>
-                <span id="err-check" class="err">
+            <div id="div-con-pass" class="row">
+                <label for="confirm-password">Confirm password:</label>
+                <input type="password" id="confirm-password" minlength="8">
+                <span id="err-confirm-pass" class="err">
                     Field is required!
                 </span>
-            <button type="submit">Submit</button>
+            </div>
+
+            <div id="div-check">
+                <input type="checkbox" id="agree">
+                <label for="agree">I agree to the terms</label>
+            </div>
+            
+            <div id="submit">
+                <button type="submit">Submit</button>
+            </div>    
         </form>
     </main>
 </body>
